@@ -522,6 +522,7 @@ PRODUCT_PACKAGES += \
     libmmcamera_tintless_algo \
     libmmcamera_tintless_bg_pca_algo \
     libmmosal \
+    libpvr \
     libqcc_file_agent \
     libqcci_legacy \
     libqcodec2 \
@@ -537,7 +538,6 @@ PRODUCT_PACKAGES += \
     libqmiservices \
     libqseed3 \
     libqtigef \
-    librs_adreno \
     libsdedrm \
     libsdm-color \
     libsdm-colormgr-algo \
@@ -2040,3 +2040,11 @@ PRODUCT_PACKAGES += \
     xtwifi-inet-agent \
     dpmd \
     tcmd
+
+PRODUCT_PACKAGES += \
+    libEGL_adreno_libEGL_adreno_symlink32 \
+    libGLESv2_adreno_libGLESv2_adreno_symlink32 \
+    libq3dtools_adreno_libq3dtools_adreno_symlink32 \
+    libEGL_adreno_libEGL_adreno_symlink64 \
+    libGLESv2_adreno_libGLESv2_adreno_symlink64 \
+    libq3dtools_adreno_libq3dtools_adreno_symlink64
