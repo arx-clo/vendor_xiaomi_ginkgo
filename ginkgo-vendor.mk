@@ -9,7 +9,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/ginkgo/proprietary/etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml \
     vendor/xiaomi/ginkgo/proprietary/etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml \
     vendor/xiaomi/ginkgo/proprietary/etc/permissions/vendor.xiaomi.hardware.misys.V3_0-permission.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.xiaomi.hardware.misys.V3_0-permission.xml \
+    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc \
+    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/init/vendor.qti.qccsyshal_aidl-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.qti.qccsyshal_aidl-service.rc \
     vendor/xiaomi/ginkgo/proprietary/system_ext/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/audiosphere.xml \
+    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/permissions/com.qti.qcc.vendor_qcc.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.qcc.vendor_qcc.xml \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/SVIConfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/SVIConfig.xml \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/acdbdata/IDP/IDP_Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/IDP/IDP_Codec_cal.acdb \
@@ -129,6 +132,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/imsqmidaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsqmidaemon.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/imsrcsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsrcsd.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/init-qcril-data.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init-qcril-data.rc \
+    vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/init.qdmastats.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qdmastats.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/init.qti.fm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.fm.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/init.qti.qcv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.qcv.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
@@ -145,6 +149,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp@1.0-service.rc \
+    vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
@@ -1638,6 +1643,7 @@ PRODUCT_PACKAGES += \
     consumerir.trinket \
     fingerprint.fpc.default \
     fingerprint.goodix.default \
+    vendor.qti.hardware.qccvndhal@1.0-impl \
     vendor.qti.hardware.soter@1.0-impl \
     vendor.xiaomi.hardware.misys@1.0-impl \
     vendor.xiaomi.hardware.misys@2.0-impl \
@@ -1756,6 +1762,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.lce@1.0_vendor \
     vendor.qti.hardware.data.qmi@1.0_vendor \
     vendor.qti.hardware.mwqemadapter@1.0 \
+    vendor.qti.hardware.qccsyshal@1.0 \
+    vendor.qti.hardware.qccvndhal@1.0-halimpl \
+    vendor.qti.hardware.qccvndhal@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
     vendor.qti.hardware.radio.ims@1.0 \
     vendor.qti.hardware.radio.ims@1.1 \
@@ -1818,12 +1827,26 @@ PRODUCT_PACKAGES += \
     fm_helium \
     libfm-hci \
     vendor.qti.hardware.fm@1.0 \
+    libqcc \
+    libqcc_file_agent_sys \
+    libqcc_netstats \
+    libqccdme \
+    libqccfileservice \
+    vendor.qti.hardware.qccsyshal@1.0 \
+    vendor.qti.hardware.qccsyshal@1.1 \
+    vendor.qti.hardware.qccsyshal@1.2-halimpl \
+    vendor.qti.hardware.qccsyshal@1.2 \
+    vendor.qti.hardware.qccvndhal@1.0 \
+    vendor.qti.qccsyshal_aidl-V1-ndk \
+    vendor.qti.qccsyshal_aidl-halimpl \
+    vendor.qti.qccvndhal_aidl-V1-ndk \
     SoterService \
     CACertService \
     CneApp \
     FingerprintExtensionService \
     IWlanService \
     TimeService \
+    QCC \
     DaxUI \
     daxService \
     vendor.xiaomi.hardware.misys-V1.0-java \
@@ -1837,6 +1860,7 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.misys@1.0.xml \
     vendor.xiaomi.hardware.misys@2.0.xml \
     vendor.xiaomi.hardware.misys@3.0.xml \
+    vendor.qti.qccsyshal_aidl-service.xml \
     adpl \
     adsprpcd \
     cdsprpcd \
@@ -1852,6 +1876,7 @@ PRODUCT_PACKAGES += \
     qcrild \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
+    vendor.qti.hardware.qccvndhal@1.0-service \
     vendor.qti.hardware.soter@1.0-service \
     vendor.qti.hardware.tui_comm@1.0-service-qti \
     vendor.xiaomi.hardware.misys@1.0-service \
@@ -1869,6 +1894,7 @@ PRODUCT_PACKAGES += \
     pm-proxy \
     pm-service \
     port-bridge \
+    qcc-trd \
     qrtr-cfg \
     qrtr-lookup \
     qrtr-ns \
@@ -1882,4 +1908,6 @@ PRODUCT_PACKAGES += \
     tftp_server \
     thermal-engine \
     time_daemon \
-    vendor.qti.hardware.soter@1.0-provision
+    vendor.qti.hardware.soter@1.0-provision \
+    qccsyshal@1.2-service \
+    qccsyshal_aidl-service
