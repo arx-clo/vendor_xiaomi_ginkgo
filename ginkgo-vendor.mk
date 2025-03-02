@@ -164,7 +164,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp@1.0-service.rc \
-    vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc \
@@ -425,6 +424,7 @@ PRODUCT_PACKAGES += \
     libCB \
     libI420colorconvert \
     libOpenCL \
+    libQSEEComAPI \
     libVkLayer_q3dtools \
     liba2dpoffload \
     libacdb-fts \
@@ -473,7 +473,6 @@ PRODUCT_PACKAGES += \
     libgcs-ipc \
     libgcs-osal \
     libgcs \
-    libgdtap \
     libgnsspps \
     libgpudataproducer \
     libgsl \
@@ -484,7 +483,6 @@ PRODUCT_PACKAGES += \
     libidl \
     libizat_client_api \
     libizat_core \
-    liblbs_core \
     liblistensoundmodel2 \
     libllvm-glnext \
     libllvm-qcom \
@@ -523,6 +521,7 @@ PRODUCT_PACKAGES += \
     libqmi_common_so \
     libqmi_csi \
     libqmi_encdec \
+    libqmi_legacy \
     libqmiservices \
     libqseed3 \
     libqtigef \
@@ -588,7 +587,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.hardware.vpp@1.3 \
     camera.trinket \
-    libOmxVideoDSMode \
     libSNPE \
     libVDClearShot \
     libVDSuperPhotoAPI \
@@ -1713,7 +1711,6 @@ PRODUCT_PACKAGES += \
     fingerprint.fpc.default \
     fingerprint.goodix.default \
     vendor.qti.hardware.alarm@1.0-impl \
-    vendor.qti.hardware.qseecom@1.0-impl \
     vendor.qti.hardware.soter@1.0-impl \
     vendor.xiaomi.hardware.misys@1.0-impl \
     vendor.xiaomi.hardware.misys@2.0-impl \
@@ -1733,7 +1730,6 @@ PRODUCT_PACKAGES += \
     lib-uceservice \
     libGPreqcancel \
     libGPreqcancel_svc \
-    libQSEEComAPI \
     libSecureUILib \
     libStDrvInt \
     libbase64 \
@@ -1751,6 +1747,7 @@ PRODUCT_PACKAGES += \
     libdrmtime \
     libdsi_netctrl \
     libgarden_haltests_e2e \
+    libgdtap \
     libgf_ca \
     libgf_hal \
     libgoodixhwfingerprint \
@@ -1760,6 +1757,7 @@ PRODUCT_PACKAGES += \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
+    liblbs_core \
     liblogwrap_vendor \
     liblqe \
     libminksocket \
@@ -1778,7 +1776,6 @@ PRODUCT_PACKAGES += \
     libqcrilFramework \
     libqcrildatactl \
     libqisl \
-    libqmi_legacy \
     libqrtr \
     libqsocket \
     libqtikeymaster4 \
@@ -1795,11 +1792,12 @@ PRODUCT_PACKAGES += \
     libsecureui_svcsock \
     libsettings \
     libsi \
+    libspl \
     libssd \
     libsystem_health_mon \
     libtime_genoff \
     libtrustedapploader \
-    libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1_vendor \
+    libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1 \
     libwms \
     libwqe \
     libwvhidl \
@@ -1836,7 +1834,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.lce@1.0_vendor \
     vendor.qti.hardware.data.qmi@1.0_vendor \
     vendor.qti.hardware.mwqemadapter@1.0 \
-    vendor.qti.hardware.qseecom@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
     vendor.qti.hardware.radio.ims@1.0 \
     vendor.qti.hardware.radio.ims@1.1 \
@@ -1971,7 +1968,6 @@ PRODUCT_PACKAGES += \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
-    vendor.qti.hardware.qseecom@1.0-service \
     vendor.qti.hardware.soter@1.0-service \
     vendor.qti.hardware.tui_comm@1.0-service-qti \
     vendor.qti.media.c2@1.0-service \
