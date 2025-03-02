@@ -96,19 +96,19 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "android.hardware.camera.provider@2.4-legacy-ginkgo",
+	name: "android.hardware.camera.provider@2.4-legacy",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
-		: {
-			srcs: ["proprietary/vendor/lib/android.hardware.camera.provider@2.4-legacy-ginkgo.so"],
-			shared_libs: [ ],
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/android.hardware.camera.provider@2.4-legacy.so"],
+			shared_libs: ["android.hardware.camera.common@1.0", "android.hardware.camera.device@1.0", "vendor.qti.hardware.camera.device@1.0", "android.hardware.camera.device@3.2", "android.hardware.camera.device@3.3", "android.hardware.camera.device@3.4", "android.hardware.camera.device@3.5", "android.hardware.camera.provider@2.4", "android.hardware.graphics.mapper@2.0", "android.hardware.graphics.mapper@3.0", "android.hardware.graphics.mapper@4.0", "android.hidl.allocator@1.0", "android.hidl.memory@1.0", "camera.device@1.0-impl", "camera.device@3.2-impl", "camera.device@3.3-impl", "camera.device@3.4-impl", "camera.device@3.5-impl", "libcamera_metadata", "libcutils", "libhardware", "libhidlbase", "liblog", "libutils", "libc++", "libc", "libm", "libdl", ],
 		},
-		: {
-			srcs: ["proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy-ginkgo.so"],
-			shared_libs: [ ],
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy.so"],
+			shared_libs: ["android.hardware.camera.common@1.0", "android.hardware.camera.device@1.0", "vendor.qti.hardware.camera.device@1.0", "android.hardware.camera.device@3.2", "android.hardware.camera.device@3.3", "android.hardware.camera.device@3.4", "android.hardware.camera.device@3.5", "android.hardware.camera.provider@2.4", "android.hardware.graphics.mapper@2.0", "android.hardware.graphics.mapper@3.0", "android.hardware.graphics.mapper@4.0", "android.hidl.allocator@1.0", "android.hidl.memory@1.0", "camera.device@1.0-impl", "camera.device@3.2-impl", "camera.device@3.3-impl", "camera.device@3.4-impl", "camera.device@3.5-impl", "libcamera_metadata", "libcutils", "libhardware", "libhidlbase", "liblog", "libutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -661,40 +661,19 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libAlacSwDec",
+	name: "libC2D2",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/vendor/lib/libAlacSwDec.so"],
-			shared_libs: ["liblog", "libc++", "libc", "libm", "libdl", ],
+			srcs: ["proprietary/vendor/lib/libC2D2.so"],
+			shared_libs: ["libgsl", "libcutils", "libutils", "libc++", "libc", "libm", "libdl", ],
 		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libAlacSwDec.so"],
-			shared_libs: ["liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libApeSwDec",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libApeSwDec.so"],
-			shared_libs: ["liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libApeSwDec.so"],
-			shared_libs: ["liblog", "libc++", "libc", "libm", "libdl", ],
+		: {
+			srcs: ["proprietary/vendor/lib64/libC2D2.so"],
+			shared_libs: [ ],
 		},
 	},
 	compile_multilib: "both",
@@ -724,27 +703,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libFlacSwDec",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libFlacSwDec.so"],
-			shared_libs: ["liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libFlacSwDec.so"],
-			shared_libs: ["liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libI420colorconvert",
 	owner: "xiaomi",
 	strip: {
@@ -758,111 +716,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libI420colorconvert.so"],
 			shared_libs: ["libutils", "libcutils", "libmm-color-convertor", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libMpeg4SwEncoder",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libMpeg4SwEncoder.so"],
-			shared_libs: ["libcutils", "libGLESv2", "libEGL", "liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libMpeg4SwEncoder.so"],
-			shared_libs: ["libcutils", "libGLESv2", "libEGL", "liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libOmxAlacDecSw",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libOmxAlacDecSw.so"],
-			shared_libs: ["libutils", "liblog", "libcutils", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libOmxAlacDecSw.so"],
-			shared_libs: ["libutils", "liblog", "libcutils", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libOmxApeDecSw",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libOmxApeDecSw.so"],
-			shared_libs: ["libutils", "liblog", "libcutils", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libOmxApeDecSw.so"],
-			shared_libs: ["libutils", "liblog", "libcutils", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libOmxSwVdec",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libOmxSwVdec.so"],
-			shared_libs: ["liblog", "libcutils", "libc2dcolorconvert", "libion", "libswvdec", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libOmxSwVdec.so"],
-			shared_libs: ["liblog", "libcutils", "libc2dcolorconvert", "libion", "libswvdec", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libOmxSwVencMpeg4",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libOmxSwVencMpeg4.so"],
-			shared_libs: ["liblog", "libcutils", "libplatformconfig", "libion", "libMpeg4SwEncoder", "libqdMetaData", "libui", "libutils", "libc2dcolorconvert", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libOmxSwVencMpeg4.so"],
-			shared_libs: ["liblog", "libcutils", "libplatformconfig", "libion", "libMpeg4SwEncoder", "libqdMetaData", "libui", "libutils", "libc2dcolorconvert", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1367,6 +1220,27 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libbtnv.so"],
 			shared_libs: ["libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libc2d30_bltlib",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libc2d30_bltlib.so"],
+			shared_libs: ["libgsl", "libcutils", "libutils", "libc++", "libc", "libm", "libdl", ],
+		},
+		: {
+			srcs: ["proprietary/vendor/lib64/libc2d30_bltlib.so"],
+			shared_libs: [ ],
 		},
 	},
 	compile_multilib: "both",
@@ -1942,27 +1816,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libgrallocutils",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libgrallocutils.so"],
-			shared_libs: ["liblog", "libutils", "libcutils", "libhardware", "libqdMetaData", "android.hardware.graphics.common@1.2", "android.hardware.graphics.mapper@2.0", "android.hardware.graphics.mapper@2.1", "android.hardware.graphics.mapper@3.0", "android.hardware.graphics.mapper@4.0", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libgrallocutils.so"],
-			shared_libs: ["liblog", "libutils", "libcutils", "libhardware", "libqdMetaData", "android.hardware.graphics.common@1.2", "android.hardware.graphics.mapper@2.0", "android.hardware.graphics.mapper@2.1", "android.hardware.graphics.mapper@3.0", "android.hardware.graphics.mapper@4.0", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libgsl",
 	owner: "xiaomi",
 	strip: {
@@ -2123,48 +1976,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libizat_core.so"],
 			shared_libs: ["libutils", "libcutils", "libloc_core", "libgps.utils", "libloc_api_v02", "libsqlite", "liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libkcl",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libkcl.so"],
-			shared_libs: ["libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libkcl.so"],
-			shared_libs: ["libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libkernelmanager",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libkernelmanager.so"],
-			shared_libs: ["libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libkernelmanager.so"],
-			shared_libs: ["libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2761,6 +2572,27 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libqcodec2",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libqcodec2.so"],
+			shared_libs: ["libutils", "libcutils", "liblog", "libcodec2_vndk", "libqdMetaData", "libhidlbase", "android.hardware.graphics.mapper@3.0", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libqcodec2.so"],
+			shared_libs: ["libutils", "libcutils", "liblog", "libcodec2_vndk", "libqdMetaData", "libhidlbase", "android.hardware.graphics.mapper@3.0", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libqdi",
 	owner: "xiaomi",
 	strip: {
@@ -3005,6 +2837,27 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libqtigef.so"],
 			shared_libs: ["liblog", "libcutils", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "librs_adreno",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		: {
+			srcs: ["proprietary/vendor/lib/librs_adreno.so"],
+			shared_libs: [ ],
+		},
+		: {
+			srcs: ["proprietary/vendor/lib64/librs_adreno.so"],
+			shared_libs: [ ],
 		},
 	},
 	compile_multilib: "both",
@@ -3551,27 +3404,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libstagefrightdolby.so"],
 			shared_libs: ["libstagefright_softomx", "libstagefright_foundation-v33", "libutils", "liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libswvdec",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libswvdec.so"],
-			shared_libs: ["libcutils", "libcdsprpc", "liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libswvdec.so"],
-			shared_libs: ["libcutils", "libcdsprpc", "liblog", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -4750,23 +4582,6 @@ cc_prebuilt_library_shared {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libalRnBRT_GL_GBWRAPPER.so"],
 			shared_libs: ["liblog", "libdl", "libGLESv2", "libEGL", "libc", "libm", ],
-		},
-	},
-	compile_multilib: "32",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libalhLDC",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libalhLDC.so"],
-			shared_libs: ["liblog", "libdl", "libc", "libm", ],
 		},
 	},
 	compile_multilib: "32",
@@ -20891,23 +20706,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libdsd2pcm",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libdsd2pcm.so"],
-			shared_libs: ["liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "32",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libflash_pmic",
 	owner: "xiaomi",
 	strip: {
@@ -26800,295 +26598,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "com.qualcomm.qti.imscmservice@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.qualcomm.qti.imscmservice@2.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.qualcomm.qti.imscmservice@2.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.qualcomm.qti.imscmservice@2.2",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.qualcomm.qti.uceservice@2.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.qualcomm.qti.uceservice@2.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.qualcomm.qti.uceservice@2.2",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.qualcomm.qti.uceservice@2.3",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.3.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.quicinc.cne.api@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.api@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.quicinc.cne.api@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.api@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.quicinc.cne.constants@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.constants@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.quicinc.cne.constants@2.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.constants@2.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.quicinc.cne.constants@2.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.constants@2.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.quicinc.cne.server@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.server@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.quicinc.cne.server@2.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.server@2.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.quicinc.cne.server@2.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.server@2.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "com.quicinc.cne.server@2.2",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.server@2.2.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "lib-imsvideocodec",
 	owner: "xiaomi",
 	strip: {
@@ -27242,74 +26751,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libembmsmmosal",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libembmsmmosal.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libembmsmmparser_lite",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libembmsmmparser_lite.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libembmssqlite",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libembmssqlite.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libembmstinyxml",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libembmstinyxml.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libimscamera_jni",
 	owner: "xiaomi",
 	strip: {
@@ -27344,108 +26785,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libjnihelpers",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libjnihelpers.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libmink-sock-native-api",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libmink-sock-native-api.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libminksocket_system",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libminksocket_system.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libmmrtpdecoder",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libmmrtpdecoder.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libmmrtpencoder",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libmmrtpencoder.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libmsp",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libmsp.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libmwqemiptablemgr",
 	owner: "xiaomi",
 	strip: {
@@ -27455,193 +26794,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/system_ext/lib64/libmwqemiptablemgr.so"],
 			shared_libs: ["liblog", "libcutils", "libbase", "libutils", "libdpmframework", "libdiag_system", "com.qualcomm.qti.dpm.api@1.0", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libqmi_cci_system",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libqmi_cci_system.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libqmi_encdec_system",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/libqmi_encdec_system.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.data.factory@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.data.factory@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.data.factory@2.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.data.factory@2.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.data.factory@2.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.data.factory@2.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.data.factory@2.2",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.data.factory@2.2.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.data.factory@2.3",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.data.factory@2.3.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.data.factory@2.4",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.data.factory@2.4.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.data.factory@2.5",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.data.factory@2.5.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.data.mwqem@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.data.mwqem@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.data.slm@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.data.slm@1.0.so"],
-			shared_libs: [ ],
 		},
 	},
 	compile_multilib: "64",
@@ -27667,261 +26819,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.cne.internal.api@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.cne.internal.constants@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.cne.internal.server@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.cne.internal.server@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.cne.internal.server@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.cne.internal.server@1.2",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.cne.internal.server@1.2.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.connection@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.connection@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.connection@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.connection@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.dynamicdds@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.dynamicdds@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.dynamicdds@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.flow@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.flow@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.iwlan@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.iwlan@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.iwlan@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.iwlan@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.latency@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.latency@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.lce@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.lce@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.data.qmi@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.data.qmi@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "vendor.qti.hardware.dpmservice@1.0",
 	owner: "xiaomi",
 	strip: {
@@ -27931,958 +26828,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so"],
 			shared_libs: ["libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.dpmservice@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.dpmservice@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.embmssl@1.0-adapter-helper",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.embmssl@1.0-adapter-helper.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.embmssl@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.embmssl@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.embmssl@1.1-adapter-helper",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.embmssl@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.embmssl@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.factory@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.factory@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.factory@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.factory@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.mwqemadapter@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.mwqemadapter@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.am@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.am@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.ims@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.ims@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.ims@1.2",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.2.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.ims@1.3",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.3.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.ims@1.4",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.4.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.ims@1.5",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.5.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.ims@1.6",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.6.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.ims@1.7",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.7.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.ims@1.8",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.8.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.internal.deviceinfo@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.lpa@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.lpa@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.lpa@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.lpa@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.lpa@1.2",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.lpa@1.2.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.qcrilhook@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.qtiradio@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.qtiradio@2.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.qtiradio@2.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.qtiradio@2.2",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.qtiradio@2.3",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.qtiradio@2.4",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.qtiradio@2.5",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.qtiradio@2.6",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.6.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.uim@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.uim@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.uim@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.uim@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.uim@1.2",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.uim@1.2.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.uim_remote_client@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.uim_remote_client@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.uim_remote_client@1.2",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.radio.uim_remote_server@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.slmadapter@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.slmadapter@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.callcapability@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.callcapability@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.callinfo@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.callinfo@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.configservice@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.configservice@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.configservice@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.configservice@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.connection@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.connection@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.factory@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.factory@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.factory@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.factory@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.factory@2.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.factory@2.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.factory@2.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.factory@2.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.rcsconfig@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.rcsconfig@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.rcsconfig@2.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.rcsconfig@2.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.rcssip@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.rcssip@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.rcssip@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.rcssip@1.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.rcsuce@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.rcsuce@1.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.ims.rcsuce@1.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.ims.rcsuce@1.1.so"],
-			shared_libs: [ ],
 		},
 	},
 	compile_multilib: "64",
@@ -28908,49 +26853,15 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.qti.latency@2.0",
+	name: "vendor.qti.imsrtpservice@3.1",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.latency@2.0.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.latency@2.1",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.latency@2.1.so"],
-			shared_libs: [ ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.qti.mstatservice@1.0",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.mstatservice@1.0.so"],
-			shared_libs: [ ],
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so"],
+			shared_libs: ["vendor.qti.imsrtpservice@3.0", "libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -29036,28 +26947,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "DeviceInfo",
-	owner: "xiaomi",
-	apk: "proprietary/system_ext/app/DeviceInfo/DeviceInfo.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "DynamicDDSService",
-	owner: "xiaomi",
-	apk: "proprietary/system_ext/app/DynamicDDSService/DynamicDDSService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
 	name: "ImsRcsService",
 	owner: "xiaomi",
 	apk: "proprietary/system_ext/app/ImsRcsService/ImsRcsService.apk",
@@ -29091,17 +26980,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "SimContact",
-	owner: "xiaomi",
-	apk: "proprietary/system_ext/app/SimContact/SimContact.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
 	name: "atfwd",
 	owner: "xiaomi",
 	apk: "proprietary/system_ext/app/atfwd/atfwd.apk",
@@ -29116,17 +26994,6 @@ android_app_import {
 	name: "colorservice",
 	owner: "xiaomi",
 	apk: "proprietary/system_ext/app/colorservice/colorservice.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "embms",
-	owner: "xiaomi",
-	apk: "proprietary/system_ext/app/embms/embms.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -29161,18 +27028,6 @@ android_app_import {
 	owner: "xiaomi",
 	apk: "proprietary/system_ext/priv-app/DaxUI/DaxUI.apk",
 	overrides: ["AudioFX", "MusicFX"],
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "QAS_DVC_MSP",
-	owner: "xiaomi",
-	apk: "proprietary/system_ext/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -29230,12 +27085,6 @@ android_app_import {
 }
 
 dex_import {
-	name: "tcmclient",
-	owner: "xiaomi",
-	jars: ["proprietary/framework/tcmclient.jar"],
-}
-
-dex_import {
 	name: "vendor.xiaomi.hardware.misys-V1.0-java",
 	owner: "xiaomi",
 	jars: ["proprietary/framework/vendor.xiaomi.hardware.misys-V1.0-java.jar"],
@@ -29282,100 +27131,9 @@ dex_import {
 }
 
 dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.2-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.uceservice-V2.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.uceservice-V2.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.uceservice-V2.2-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.2-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.uceservice-V2.3-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.3-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.quicinc.cne.api-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.quicinc.cne.api-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.quicinc.cne.api-V1.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.quicinc.cne.api-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.quicinc.cne.constants-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.quicinc.cne.constants-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.quicinc.cne.constants-V2.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.quicinc.cne.constants-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.quicinc.cne.constants-V2.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/com.quicinc.cne.constants-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
 	name: "dpmapi",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/dpmapi.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "embmslibrary",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/embmslibrary.jar"],
 	system_ext_specific: true,
 }
 
@@ -29387,76 +27145,6 @@ dex_import {
 }
 
 dex_import {
-	name: "qti-telephony-common",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/qti-telephony-common.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.data.factory-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.data.factory-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.data.factory-V2.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.data.factory-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.data.factory-V2.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.data.factory-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.data.factory-V2.2-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.data.factory-V2.2-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.data.factory-V2.3-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.data.factory-V2.3-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.data.factory-V2.4-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.data.factory-V2.4-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.data.factory-V2.5-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.data.factory-V2.5-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.data.mwqem-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.data.mwqem-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.data.slm-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.data.slm-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
 	name: "vendor.qti.hardware.alarm-V1.0-java",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar"],
@@ -29464,268 +27152,9 @@ dex_import {
 }
 
 dex_import {
-	name: "vendor.qti.hardware.data.cne.internal.api-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.cne.internal.constants-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.cne.internal.server-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.cne.internal.server-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.cne.internal.server-V1.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.cne.internal.server-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.connection-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.connection-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.connection-V1.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.connection-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.dynamicdds-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.dynamicdds-V1.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.dynamicdds-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.flow-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.flow-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.iwlan-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.iwlan-V1.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.iwlan-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.latency-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.lce-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.lce-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.qmi-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.dpmservice-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.dpmservice-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.dpmservice-V1.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.dpmservice-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.mwqemadapter-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.mwqemadapter-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.slmadapter-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.slmadapter-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
 	name: "vendor.qti.hardware.soter-V1.0-java",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.soter-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.callcapability-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.callcapability-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.callinfo-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.configservice-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.configservice-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.configservice-V1.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.configservice-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.connection-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.factory-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.factory-V1.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.factory-V2.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.factory-V2.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsconfig-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsconfig-V1.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsconfig-V2.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsconfig-V2.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcssip-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcssip-V1.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsuce-V1.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsuce-V1.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.latency-V2.0-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.latency-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.latency-V2.1-java",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/vendor.qti.latency-V2.1-java.jar"],
 	system_ext_specific: true,
 }
 
@@ -30179,6 +27608,24 @@ cc_prebuilt_binary {
 		},
 	},
 	compile_multilib: "64",
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	relative_install_path: "hw",
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "vendor.qti.media.c2@1.0-service",
+	owner: "xiaomi",
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service"],
+			shared_libs: ["libqcodec2", "android.hardware.media.c2@1.0", "android.hardware.media.omx@1.0", "liblog", "libcutils", "libavservices_minijail", "libbinder", "libhidlbase", "libcodec2_vndk", "libstagefright_omx", "libstagefright_xmlparser", "libutils", "libvndksupport", "libcodec2_hidl@1.0", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "32",
 	strip: {
 		none: true,
 	},
@@ -30876,47 +28323,5 @@ cc_prebuilt_binary {
 	},
 	prefer: true,
 	system_ext_specific: true,
-}
-
-install_symlink {
-	name: "libEGL_adreno_libEGL_adreno_symlink32",
-	soc_specific: true,
-	installed_location: "lib/libEGL_adreno.so",
-	symlink_target: "/vendor/lib/egl/libEGL_adreno.so",
-}
-
-install_symlink {
-	name: "libGLESv2_adreno_libGLESv2_adreno_symlink32",
-	soc_specific: true,
-	installed_location: "lib/libGLESv2_adreno.so",
-	symlink_target: "/vendor/lib/egl/libGLESv2_adreno.so",
-}
-
-install_symlink {
-	name: "libq3dtools_adreno_libq3dtools_adreno_symlink32",
-	soc_specific: true,
-	installed_location: "lib/libq3dtools_adreno.so",
-	symlink_target: "/vendor/lib/egl/libq3dtools_adreno.so",
-}
-
-install_symlink {
-	name: "libEGL_adreno_libEGL_adreno_symlink64",
-	soc_specific: true,
-	installed_location: "lib64/libEGL_adreno.so",
-	symlink_target: "/vendor/lib64/egl/libEGL_adreno.so",
-}
-
-install_symlink {
-	name: "libGLESv2_adreno_libGLESv2_adreno_symlink64",
-	soc_specific: true,
-	installed_location: "lib64/libGLESv2_adreno.so",
-	symlink_target: "/vendor/lib64/egl/libGLESv2_adreno.so",
-}
-
-install_symlink {
-	name: "libq3dtools_adreno_libq3dtools_adreno_symlink64",
-	soc_specific: true,
-	installed_location: "lib64/libq3dtools_adreno.so",
-	symlink_target: "/vendor/lib64/egl/libq3dtools_adreno.so",
 }
 
