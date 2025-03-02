@@ -351,7 +351,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/sensors/proto/sns_ultra_violet.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_ultra_violet.proto \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_wrist_tilt_gesture.proto \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
-    vendor/xiaomi/ginkgo/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
     vendor/xiaomi/ginkgo/proprietary/vendor/firmware/a610_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a610_zap.b00 \
     vendor/xiaomi/ginkgo/proprietary/vendor/firmware/a610_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a610_zap.b01 \
     vendor/xiaomi/ginkgo/proprietary/vendor/firmware/a610_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a610_zap.b02 \
@@ -411,7 +410,6 @@ PRODUCT_PACKAGES += \
     audio.bluetooth_qti.default \
     audio.primary.trinket \
     sound_trigger.primary.trinket \
-    vendor.qti.gnss@4.0-impl \
     vendor.qti.hardware.bluetooth_audio@2.0-impl \
     vendor.qti.hardware.bluetooth_audio@2.1-impl \
     vendor.qti.hardware.bluetooth_sar@1.1-impl \
@@ -435,9 +433,6 @@ PRODUCT_PACKAGES += \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
-    libasn1cper \
-    libasn1crt \
-    libasn1crtx \
     libaudcal \
     libaudio_log_utils \
     libaudioalsa \
@@ -451,14 +446,11 @@ PRODUCT_PACKAGES += \
     libc2d30_bltlib \
     libcapiv2svacnn \
     libcapiv2vop \
-    libcdfw \
-    libcdfw_remote_api \
     libcdsp_default_listener \
     libcdsprpc \
     libcirrusspkrprot \
     libcomprcapture \
     libdapparamstorage \
-    libdataitems \
     libdeccfg \
     libdiag \
     libdisp-aba \
@@ -468,12 +460,10 @@ PRODUCT_PACKAGES += \
     libexthwplugin \
     libfastcvdsp_stub \
     libfastcvopt \
-    libgarden \
     libgcs-calwrapper \
     libgcs-ipc \
     libgcs-osal \
     libgcs \
-    libgnsspps \
     libgpudataproducer \
     libgsl \
     libhdmiedid \
@@ -481,17 +471,9 @@ PRODUCT_PACKAGES += \
     libhdr_tm \
     libhfp \
     libidl \
-    libizat_client_api \
-    libizat_core \
     liblistensoundmodel2 \
     libllvm-glnext \
     libllvm-qcom \
-    libloc_api_v02 \
-    libloc_socket \
-    liblocationservice \
-    liblocationservice_glue \
-    liblowi_client \
-    liblowi_wifihal \
     libmdmdetect \
     libmdsprpc \
     libminkdescriptor \
@@ -509,7 +491,6 @@ PRODUCT_PACKAGES += \
     libmmosal \
     libpvr \
     libqcbor \
-    libqcc_file_agent \
     libqcci_legacy \
     libqcodec2 \
     libqdi \
@@ -534,7 +515,6 @@ PRODUCT_PACKAGES += \
     libsdsprpc \
     libseemore \
     libsensorslog \
-    libslimclient \
     libsndmonitor \
     libsns_device_mode_stub \
     libsns_fastRPC_util \
@@ -551,14 +531,10 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_ac4dec \
     libstagefright_soft_ddpdec \
     libstagefrightdolby \
-    libsynergy_loc_api \
     libsysmon_cdsp_skel \
     libthermalclient \
     libthermalfeature \
     libtinyxml2_1 \
-    libxtadapter \
-    libxtwifi_server_protocol \
-    libxtwifi_server_protocol_uri_v3 \
     sensors.ssc \
     libasphere \
     libeffectproxy \
@@ -569,19 +545,10 @@ PRODUCT_PACKAGES += \
     libswdap \
     libswgamedap \
     vendor.dolby.hardware.dms@2.0_vendor \
-    vendor.qti.gnss@1.0 \
-    vendor.qti.gnss@1.1 \
-    vendor.qti.gnss@1.2 \
-    vendor.qti.gnss@2.0 \
-    vendor.qti.gnss@2.1 \
-    vendor.qti.gnss@3.0 \
-    vendor.qti.gnss@4.0-service \
-    vendor.qti.gnss@4.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.fm@1.0_vendor \
-    vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.tui_comm@1.0 \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
@@ -603,6 +570,7 @@ PRODUCT_PACKAGES += \
     libalCFR \
     libalLDC \
     libalRnBRT_GL_GBWRAPPER \
+    libalhLDC \
     libarcsoft_beautyshot \
     libarcsoft_dualcam_refocus \
     libarcsoft_high_dynamic_range \
@@ -1686,7 +1654,6 @@ PRODUCT_PACKAGES += \
     libqomx_jpegenc_pipe \
     libremosaic_daemon \
     libsmwrapper \
-    libsn100u_fw \
     libsurround_3mic_proc \
     libsymphony-cpu \
     libsymphonypower \
@@ -1710,6 +1677,7 @@ PRODUCT_PACKAGES += \
     consumerir.trinket \
     fingerprint.fpc.default \
     fingerprint.goodix.default \
+    vendor.qti.gnss@4.3-impl \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.soter@1.0-impl \
     vendor.xiaomi.hardware.misys@1.0-impl \
@@ -1732,8 +1700,11 @@ PRODUCT_PACKAGES += \
     libGPreqcancel_svc \
     libSecureUILib \
     libStDrvInt \
+    libaoa \
     libbase64 \
     libcacertclient \
+    libcdfw \
+    libcdfw_remote_api \
     libcheckpid \
     libcne \
     libcneapiclient \
@@ -1741,24 +1712,38 @@ PRODUCT_PACKAGES += \
     libcneqmiutils \
     libconfigdb \
     libcpion \
+    libdataitems \
     libdlbdsservice \
     libdpmqmihal \
     libdrmfs \
     libdrmtime \
     libdsi_netctrl \
+    libgarden \
     libgarden_haltests_e2e \
     libgdtap \
     libgf_ca \
     libgf_hal \
+    libgnsspps \
     libgoodixhwfingerprint \
     libhdcpsrm \
     libhexagon_nn_stub \
+    libizat_client_api \
+    libizat_core \
     libjnihelper \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
     liblbs_core \
+    libloc_api_v02 \
+    libloc_api_wds \
+    libloc_qwes_iface \
+    libloc_ril_client \
+    libloc_socket \
+    liblocationservice \
+    liblocationservice_glue \
     liblogwrap_vendor \
+    liblowi_client \
+    liblowi_wifihal \
     liblqe \
     libminksocket \
     libnetmgr \
@@ -1772,6 +1757,7 @@ PRODUCT_PACKAGES += \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
+    libqcc_file_agent \
     libqcmaputils \
     libqcrilFramework \
     libqcrildatactl \
@@ -1792,6 +1778,7 @@ PRODUCT_PACKAGES += \
     libsecureui_svcsock \
     libsettings \
     libsi \
+    libslimclient \
     libspl \
     libssd \
     libsystem_health_mon \
@@ -1802,6 +1789,7 @@ PRODUCT_PACKAGES += \
     libwqe \
     libwvhidl \
     libxml \
+    libxtadapter \
     libwvdrmengine \
     qcrild_librilutils \
     qtibus \
@@ -1821,6 +1809,17 @@ PRODUCT_PACKAGES += \
     vendor.qti.data.factory@2.3 \
     vendor.qti.data.mwqem@1.0 \
     vendor.qti.data.slm@1.0 \
+    vendor.qti.gnss@1.0 \
+    vendor.qti.gnss@1.1 \
+    vendor.qti.gnss@1.2 \
+    vendor.qti.gnss@2.0 \
+    vendor.qti.gnss@2.1 \
+    vendor.qti.gnss@3.0 \
+    vendor.qti.gnss@4.0 \
+    vendor.qti.gnss@4.1 \
+    vendor.qti.gnss@4.2 \
+    vendor.qti.gnss@4.3-service \
+    vendor.qti.gnss@4.3 \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.cacert@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0_vendor \
@@ -1834,6 +1833,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.lce@1.0_vendor \
     vendor.qti.hardware.data.qmi@1.0_vendor \
     vendor.qti.hardware.mwqemadapter@1.0 \
+    vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
     vendor.qti.hardware.radio.ims@1.0 \
     vendor.qti.hardware.radio.ims@1.1 \
@@ -1944,7 +1944,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.soter-V1.0-java \
     android.hardware.neuralnetworks@1.3-service-qti.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
-    vendor.qti.gnss@4.0-service.xml \
+    vendor.qti.gnss@4.3-service.xml \
     vendor.xiaomi.hardware.misys@1.0.xml \
     vendor.xiaomi.hardware.misys@2.0.xml \
     vendor.xiaomi.hardware.misys@3.0.xml \
@@ -1984,7 +1984,6 @@ PRODUCT_PACKAGES += \
     irsc_util \
     loc_launcher \
     lowi-server \
-    mlid \
     netmgrd \
     pd-mapper \
     pm-proxy \
@@ -2009,8 +2008,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.soter@1.0-provision \
     wifilearner \
     xtra-daemon \
-    xtwifi-client \
-    xtwifi-inet-agent \
     dpmd \
     tcmd
 
