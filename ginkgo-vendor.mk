@@ -6,26 +6,10 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/ginkgo
 
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/ginkgo/proprietary/etc/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     vendor/xiaomi/ginkgo/proprietary/etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml \
     vendor/xiaomi/ginkgo/proprietary/etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml \
     vendor/xiaomi/ginkgo/proprietary/etc/permissions/vendor.xiaomi.hardware.misys.V3_0-permission.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.xiaomi.hardware.misys.V3_0-permission.xml \
-    vendor/xiaomi/ginkgo/proprietary/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/cdma_call_conf.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/cdma_call_conf.xml \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/init/tcmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/tcmd.rc \
     vendor/xiaomi/ginkgo/proprietary/system_ext/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/audiosphere.xml \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_libpermissions.xml \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_permissions.xml \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.ims.rcsservice.xml \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/seccomp_policy/tcmd.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/tcmd.policy \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/spn-conf.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/spn-conf.xml \
-    vendor/xiaomi/ginkgo/proprietary/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/SVIConfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/SVIConfig.xml \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/acdbdata/IDP/IDP_Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/IDP/IDP_Codec_cal.acdb \
@@ -97,7 +81,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/camera/score_icon.png:$(TARGET_COPY_OUT_VENDOR)/etc/camera/score_icon.png \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/camera/vidhance_C3J_calibration:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance_C3J_calibration \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/camera/vidhance_C3X_calibration:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance_C3X_calibration \
-    vendor/xiaomi/ginkgo/proprietary/vendor/etc/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
@@ -160,14 +143,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-sscrpc-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
-    vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
-    vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
-    vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc \
-    vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
@@ -181,7 +160,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/qdcm_calib_data_nt36672a_video_mode_dsi_tianma_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_nt36672a_video_mode_dsi_tianma_panel.xml \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/seccomp_policy/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
-    vendor/xiaomi/ginkgo/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
     vendor/xiaomi/ginkgo/proprietary/vendor/etc/sensors/config/ak991x_dri_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/ak991x_dri_0.json \
@@ -400,12 +378,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.dolby.hardware.dms@2.0 \
     btaudio_offload_if \
-    eglSubDriverAndroid \
-    libEGL_adreno \
-    libGLESv1_CM_adreno \
-    libGLESv2_adreno \
-    libq3dtools_adreno \
-    libq3dtools_esx \
     android.hardware.bluetooth@1.0-impl-qti \
     audio.bluetooth_qti.default \
     audio.primary.trinket \
@@ -417,20 +389,23 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0-impl \
     vendor.qti.hardware.capabilityconfigstore@1.0-impl \
     vendor.qti.hardware.fm@1.0-impl \
-    vulkan.adreno \
-    libC2D2 \
-    libCB \
+    libFlacSwDec \
     libI420colorconvert \
-    libOpenCL \
+    libOmxAacDec \
+    libOmxAlacDec \
+    libOmxAmrDec \
+    libOmxAmrwbplusDec \
+    libOmxApeDec \
+    libOmxEvrcDec \
+    libOmxG711Dec \
+    libOmxQcelp13Dec \
+    libOmxWmaDec \
     libQSEEComAPI \
-    libVkLayer_q3dtools \
     liba2dpoffload \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
     libadiertac \
-    libadreno_app_profiles \
-    libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
     libaudcal \
@@ -443,7 +418,6 @@ PRODUCT_PACKAGES += \
     libbluetooth_audio_session_qti_2_1 \
     libbt-hidlclient \
     libbtnv \
-    libc2d30_bltlib \
     libcapiv2svacnn \
     libcapiv2vop \
     libcdsp_default_listener \
@@ -454,7 +428,6 @@ PRODUCT_PACKAGES += \
     libdeccfg \
     libdiag \
     libdisp-aba \
-    libdisplayqos \
     libdpps \
     libdsutils \
     libexthwplugin \
@@ -464,16 +437,11 @@ PRODUCT_PACKAGES += \
     libgcs-ipc \
     libgcs-osal \
     libgcs \
-    libgpudataproducer \
-    libgsl \
     libhdmiedid \
     libhdmipassthru \
-    libhdr_tm \
     libhfp \
     libidl \
     liblistensoundmodel2 \
-    libllvm-glnext \
-    libllvm-qcom \
     libmdmdetect \
     libmdsprpc \
     libminkdescriptor \
@@ -489,10 +457,8 @@ PRODUCT_PACKAGES += \
     libmmcamera_tintless_algo \
     libmmcamera_tintless_bg_pca_algo \
     libmmosal \
-    libpvr \
     libqcbor \
     libqcci_legacy \
-    libqcodec2 \
     libqdi \
     libqdp \
     libqmi \
@@ -504,14 +470,7 @@ PRODUCT_PACKAGES += \
     libqmi_encdec \
     libqmi_legacy \
     libqmiservices \
-    libqseed3 \
     libqtigef \
-    libsdedrm \
-    libsdm-color \
-    libsdm-colormgr-algo \
-    libsdm-diag \
-    libsdm-disp-vndapis \
-    libsdmextension \
     libsdsprpc \
     libseemore \
     libsensorslog \
@@ -534,7 +493,6 @@ PRODUCT_PACKAGES += \
     libsysmon_cdsp_skel \
     libthermalclient \
     libthermalfeature \
-    libtinyxml2_1 \
     sensors.ssc \
     libasphere \
     libeffectproxy \
@@ -554,6 +512,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.hardware.vpp@1.3 \
     camera.trinket \
+    libOmxDsdDec \
+    libOmxVideoDSMode \
     libSNPE \
     libVDClearShot \
     libVDSuperPhotoAPI \
@@ -1519,6 +1479,7 @@ PRODUCT_PACKAGES += \
     libdepthmapwrapper \
     libdng_sdkvendor \
     libdrc \
+    libdsd2pcm \
     libflash_pmic \
     libft2vendor \
     libhal_dbg \
@@ -1671,14 +1632,12 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.imscmservice@2.2_vendor \
     com.qualcomm.qti.uceservice@2.0_vendor \
     com.qualcomm.qti.uceservice@2.1_vendor \
-    com.qualcomm.qti.uceservice@2.2 \
-    com.qualcomm.qti.uceservice@2.3 \
+    com.qualcomm.qti.uceservice@2.2_vendor \
+    com.qualcomm.qti.uceservice@2.3_vendor \
     android.hardware.gatekeeper@1.0-impl-qti \
     consumerir.trinket \
     fingerprint.fpc.default \
     fingerprint.goodix.default \
-    vendor.qti.gnss@4.3-impl \
-    vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.soter@1.0-impl \
     vendor.xiaomi.hardware.misys@1.0-impl \
     vendor.xiaomi.hardware.misys@2.0-impl \
@@ -1698,13 +1657,13 @@ PRODUCT_PACKAGES += \
     lib-uceservice \
     libGPreqcancel \
     libGPreqcancel_svc \
+    libOmxApeDecSw \
+    libOmxSwVdec \
+    libOmxSwVencMpeg4 \
     libSecureUILib \
     libStDrvInt \
-    libaoa \
     libbase64 \
     libcacertclient \
-    libcdfw \
-    libcdfw_remote_api \
     libcheckpid \
     libcne \
     libcneapiclient \
@@ -1712,38 +1671,21 @@ PRODUCT_PACKAGES += \
     libcneqmiutils \
     libconfigdb \
     libcpion \
-    libdataitems \
     libdlbdsservice \
     libdpmqmihal \
     libdrmfs \
     libdrmtime \
     libdsi_netctrl \
-    libgarden \
-    libgarden_haltests_e2e \
-    libgdtap \
     libgf_ca \
     libgf_hal \
-    libgnsspps \
     libgoodixhwfingerprint \
     libhdcpsrm \
     libhexagon_nn_stub \
-    libizat_client_api \
-    libizat_core \
     libjnihelper \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
-    liblbs_core \
-    libloc_api_v02 \
-    libloc_api_wds \
-    libloc_qwes_iface \
-    libloc_ril_client \
-    libloc_socket \
-    liblocationservice \
-    liblocationservice_glue \
     liblogwrap_vendor \
-    liblowi_client \
-    liblowi_wifihal \
     liblqe \
     libminksocket \
     libnetmgr \
@@ -1757,7 +1699,6 @@ PRODUCT_PACKAGES += \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
-    libqcc_file_agent \
     libqcmaputils \
     libqcrilFramework \
     libqcrildatactl \
@@ -1778,9 +1719,9 @@ PRODUCT_PACKAGES += \
     libsecureui_svcsock \
     libsettings \
     libsi \
-    libslimclient \
     libspl \
     libssd \
+    libswvdec \
     libsystem_health_mon \
     libtime_genoff \
     libtrustedapploader \
@@ -1789,7 +1730,6 @@ PRODUCT_PACKAGES += \
     libwqe \
     libwvhidl \
     libxml \
-    libxtadapter \
     libwvdrmengine \
     qcrild_librilutils \
     qtibus \
@@ -1797,11 +1737,6 @@ PRODUCT_PACKAGES += \
     unnhal-acc-adreno \
     unnhal-acc-common \
     unnhal-acc-hvx \
-    vendor.display.color@1.0 \
-    vendor.display.color@1.1 \
-    vendor.display.color@1.2 \
-    vendor.display.color@1.3 \
-    vendor.display.postproc@1.0 \
     vendor.dolby.hardware.dms@2.0-impl \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
@@ -1809,18 +1744,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.data.factory@2.3 \
     vendor.qti.data.mwqem@1.0 \
     vendor.qti.data.slm@1.0 \
-    vendor.qti.gnss@1.0 \
-    vendor.qti.gnss@1.1 \
-    vendor.qti.gnss@1.2 \
-    vendor.qti.gnss@2.0 \
-    vendor.qti.gnss@2.1 \
-    vendor.qti.gnss@3.0 \
-    vendor.qti.gnss@4.0 \
-    vendor.qti.gnss@4.1 \
-    vendor.qti.gnss@4.2 \
-    vendor.qti.gnss@4.3-service \
-    vendor.qti.gnss@4.3 \
-    vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.cacert@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0_vendor \
     vendor.qti.hardware.data.cne.internal.constants@1.0_vendor \
@@ -1833,7 +1756,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.lce@1.0_vendor \
     vendor.qti.hardware.data.qmi@1.0_vendor \
     vendor.qti.hardware.mwqemadapter@1.0 \
-    vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
     vendor.qti.hardware.radio.ims@1.0 \
     vendor.qti.hardware.radio.ims@1.1 \
@@ -1864,7 +1786,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.uim_remote_server@1.0 \
     vendor.qti.hardware.slmadapter@1.0 \
     vendor.qti.hardware.soter@1.0 \
-    vendor.qti.hardware.wifi.wifilearner@1.0 \
     vendor.qti.ims.callcapability@1.0 \
     vendor.qti.ims.callinfo@1.0_vendor \
     vendor.qti.ims.factory@1.0 \
@@ -1897,54 +1818,22 @@ PRODUCT_PACKAGES += \
     fm_helium \
     libfm-hci \
     vendor.qti.hardware.fm@1.0 \
-    com.qualcomm.qti.dpm.api@1.0 \
-    lib-imsvideocodec \
-    lib-imsvt \
-    lib-imsvtextutils \
-    lib-imsvtutils \
-    libdiag_system \
-    libdpmctmgr \
-    libdpmfdmgr \
-    libdpmframework \
-    libdpmtcm \
-    libimscamera_jni \
-    libimsmedia_jni \
-    libmwqemiptablemgr \
-    vendor.qti.diaghal@1.0 \
-    vendor.qti.hardware.dpmservice@1.0 \
-    vendor.qti.imsrtpservice@3.0 \
-    vendor.qti.imsrtpservice@3.1 \
     SoterService \
     CACertService \
     CneApp \
     FingerprintExtensionService \
     IWlanService \
     TimeService \
-    PowerOffAlarm \
-    ImsRcsService \
-    QtiTelephony \
-    QtiTelephonyService \
-    atfwd \
-    imssettings \
-    uceShimService \
     DaxUI \
     daxService \
-    dpmserviceapp \
-    ims \
-    qcrilmsgtunnel \
     vendor.xiaomi.hardware.misys-V1.0-java \
     vendor.xiaomi.hardware.misys-V2.0-java \
     vendor.xiaomi.hardware.misys.V3_0 \
     com.fingerprints.extension \
     audiosphere \
-    com.qti.dpmframework \
-    dpmapi \
-    qcrilhook \
-    vendor.qti.hardware.alarm-V1.0-java \
     vendor.qti.hardware.soter-V1.0-java \
     android.hardware.neuralnetworks@1.3-service-qti.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
-    vendor.qti.gnss@4.3-service.xml \
     vendor.xiaomi.hardware.misys@1.0.xml \
     vendor.xiaomi.hardware.misys@2.0.xml \
     vendor.xiaomi.hardware.misys@3.0.xml \
@@ -1952,25 +1841,19 @@ PRODUCT_PACKAGES += \
     adsprpcd \
     cdsprpcd \
     cnd \
-    cnss-daemon \
     dpmQmiMgr \
     dspservice \
     fm_qsoc_patches \
-    garden_app \
-    hvdcp_opti \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.drm@1.3-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
     android.hardware.keymaster@4.0-service-qti \
     android.hardware.neuralnetworks@1.3-service-qti \
     qcrild \
-    vendor.display.color@1.0-service \
     vendor.dolby.hardware.dms@2.0-service \
-    vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
     vendor.qti.hardware.soter@1.0-service \
     vendor.qti.hardware.tui_comm@1.0-service-qti \
-    vendor.qti.media.c2@1.0-service \
     vendor.xiaomi.hardware.misys@1.0-service \
     vendor.xiaomi.hardware.misys@2.0-service \
     vendor.xiaomi.hardware.misys@3.0-service \
@@ -1979,18 +1862,13 @@ PRODUCT_PACKAGES += \
     imsqmidaemon \
     imsrcsd \
     init.qcom.sensors \
-    init.qti.chg_policy \
     init.qti.qcv \
     irsc_util \
-    loc_launcher \
-    lowi-server \
     netmgrd \
     pd-mapper \
     pm-proxy \
     pm-service \
     port-bridge \
-    power_off_alarm \
-    ppd \
     qrtr-cfg \
     qrtr-lookup \
     qrtr-ns \
@@ -2001,20 +1879,7 @@ PRODUCT_PACKAGES += \
     rmt_storage \
     sensors.qti \
     shsusrd \
-    slim_daemon \
     tftp_server \
     thermal-engine \
     time_daemon \
-    vendor.qti.hardware.soter@1.0-provision \
-    wifilearner \
-    xtra-daemon \
-    dpmd \
-    tcmd
-
-PRODUCT_PACKAGES += \
-    libEGL_adreno_libEGL_adreno_symlink32 \
-    libGLESv2_adreno_libGLESv2_adreno_symlink32 \
-    libq3dtools_adreno_libq3dtools_adreno_symlink32 \
-    libEGL_adreno_libEGL_adreno_symlink64 \
-    libGLESv2_adreno_libGLESv2_adreno_symlink64 \
-    libq3dtools_adreno_libq3dtools_adreno_symlink64
+    vendor.qti.hardware.soter@1.0-provision
